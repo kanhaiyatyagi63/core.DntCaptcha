@@ -43,13 +43,14 @@ namespace core.captcha.Controllers
         //[HttpPost, ValidateAntiForgeryToken]
         //public IActionResult Login(LoginModel model)
         //{
-        //    if (ModelState.IsValid)
+        //    if (!ModelState.IsValid)
         //    {
-        //        if (!_validatorService.HasRequestValidCaptchaEntry(Language.English, DisplayMode.ShowDigits))
-        //        {
-        //            this.ModelState.AddModelError(_captchaOptions.Value.CaptchaComponent.CaptchaInputName, "Please Enter Valid Captcha.");
-        //            return View("Login");
-        //        }
+        //        return View(model);
+        //    }
+        //    if (!_validatorService.HasRequestValidCaptchaEntry(Language.English, DisplayMode.ShowDigits))
+        //    {
+        //        this.ModelState.AddModelError(_captchaOptions.Value.CaptchaComponent.CaptchaInputName, "Please Enter Valid Captcha.");
+        //        return View();
         //    }
         //    ViewBag.message = "Login Successfull!";
         //    return View();
