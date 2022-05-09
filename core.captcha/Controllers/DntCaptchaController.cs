@@ -30,16 +30,29 @@ namespace core.captcha.Controllers
             CaptchaGeneratorDisplayMode = DisplayMode.ShowDigits)]
         public IActionResult Login(LoginModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                if (!_validatorService.HasRequestValidCaptchaEntry(Language.English, DisplayMode.ShowDigits))
-                {
-                    this.ModelState.AddModelError(_captchaOptions.Value.CaptchaComponent.CaptchaInputName, "Please Enter Valid Captcha.");
-                    return View("Login");
-                }
+                return View();
             }
             ViewBag.message = "Login Successfull!";
             return View();
         }
+
+        // OR
+
+        //[HttpPost, ValidateAntiForgeryToken]
+        //public IActionResult Login(LoginModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        if (!_validatorService.HasRequestValidCaptchaEntry(Language.English, DisplayMode.ShowDigits))
+        //        {
+        //            this.ModelState.AddModelError(_captchaOptions.Value.CaptchaComponent.CaptchaInputName, "Please Enter Valid Captcha.");
+        //            return View("Login");
+        //        }
+        //    }
+        //    ViewBag.message = "Login Successfull!";
+        //    return View();
+        //}
     }
 }
