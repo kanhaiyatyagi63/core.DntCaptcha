@@ -1,0 +1,60 @@
+﻿@model LoginModel
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h3 class="card-title">Login</h3>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label asp-for="Username" class="form-label"></label>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <span class="bi-person"></span>
+                    </span>
+                    <input asp-for="Username" class="form-control" dir="ltr" AutoCompleteType="Disabled" />
+                </div>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label"></label>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <span class="bi-key"></span>
+                    </span>
+                    <input asp-for="Password" class="form-control" dir="ltr" />
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                Security code
+            </label>
+            <div>
+                <dnt-captcha asp-captcha-generator-max="999999"
+                             asp-captcha-generator-min="111111"
+                             asp-captcha-generator-language="English"
+                             asp-captcha-generator-display-mode="ShowDigits"
+                             asp-use-relative-urls="true"
+                             asp-placeholder="Enter Captcha"
+                             asp-validation-error-message="Please enter the security code."
+                             asp-font-name="Tahoma"
+                             asp-font-size="20"
+                             asp-fore-color="#333333"
+                             asp-back-color="#ccc"
+                             asp-text-box-class="text-box form-control"
+                             asp-text-box-template="<span class='input-group-prepend'><span class='form-group-text'></span></span>{0}"
+                             asp-validation-message-class="text-danger"
+                             asp-refresh-button-class="fas fa-redo btn-sm"
+                             asp-use-noise="false" />
+            </div>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <input type="submit" class="btn btn-secondary" value="Login" />
+    </footer>
+</div>
+@*<div asp-validation-summary="All" class="text-danger alert alert-block"></div>*@
