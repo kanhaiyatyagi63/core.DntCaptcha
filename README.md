@@ -168,3 +168,24 @@ namespace core.captcha.Controllers
 }
 
 ```
+
+# Technology 
+1. Dot net 6
+2. HTML
+3. CSS
+4. Javascript
+5. Bootstrap
+6. c#
+7. jQuery
+8. DNT Captcha
+
+# Author
+* Facebook - [Kanhaya Tyagi](https://www.facebook.com/kanhaiyatyagi63/)
+* StackOverFlow - [Kanhaya Tyagi](https://stackoverflow.com/users/14945515/kanhaya-tyagi)
+* LinkedIn - [Kanhaya Tyagi](https://www.linkedin.com/in/kanhaya-tyagi-510b55141/)
+* Twitter - [Kanhaya Tyagi](https://www.twitter.com/kanhaiyatyagi63/)
+* Bit Bucket - [Kanhaya Tyagi](https://bitbucket.org/kanhaiyatyagi63/)
+
+
+# License
+Tracker is under [MIT](https://github.com/kanhaiyatyagi63/core.DntCaptcha/blob/master/License.md)
